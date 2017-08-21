@@ -135,7 +135,9 @@ global.bruhdash = {
       }return takeArray;
     },
 
-  // creates a slice of an array with n elements taken from the end
+  // creates a slice of an array with n elements taken from the end\
+  //for(var i = arr.length - 1; i >= 0; i--) --> Takes from end
+  // for (var i=0; i<arry.length; i++) ---> takes from start
   takeRight: function () {
 
   },
