@@ -46,8 +46,14 @@ global.bruhdash = {
   },
 
   // returns an array with all elements except for the last element
-  initial: function () {
-
+  
+  initial: function (arry) {
+      var diffArray = [];
+        for (var i=0; i<arry.length; i++){
+          if(i < arry.length - 1){
+              diffArray.push(arry[i]);
+      } 
+     } return diffArray;
   },
   
   // returns an array with all falsey values removed
