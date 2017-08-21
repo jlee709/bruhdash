@@ -31,7 +31,10 @@ global.bruhdash = {
   },
 
 
-  // returns the index of the first matching element from left to right
+  //  returns the index of the first matching element from left to right
+  //  should return index of first value matched from right to left 
+  //  should return -1 if value cannot be found in array ‣
+
   lastIndexOf: function (arr, num) {
     for(var i = arr.length - 1; i >= 0; i--){
       if(arr[i] === num){
