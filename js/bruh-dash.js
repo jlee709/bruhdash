@@ -208,8 +208,24 @@ global.bruhdash = {
   },
 
   // creates an array excluding all the specified values
-  without: function() {
+  without: function(arry,idx) {
+    
+    var chosen = [];
+    //checking for bool match on both i & j index sweep
+    for(var i=0; i<arry.length; i++){
+      
+      var it = false;
+    // adding break cond for match to continue loop
+      for(var j=0; j<idx.length; j++){
+        if(arry[i] === idx[j]){
+          it = true;
+          break;
+      }
+    } if (it !== true){  //cond not true push arry[i] to chosen arry
+        chosen.push(arry[i]);
+    }
 
+    } return chosen;
   },
 
   // returns an array with specified values excluded
