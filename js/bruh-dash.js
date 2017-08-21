@@ -229,8 +229,21 @@ global.bruhdash = {
   },
 
   // returns an array with specified values excluded
-  difference: function() {
+  difference: function(arry, idx) {
+      var chosen = [];
+      
+      // loop starts 
+      for(var i=0;i<arry.length; i++){
 
+        // checking for idx param match of arry. if match break loop and 2nd iter starts
+          for(var j=0; j<idx.length; j++){
+            if(arry[i] === idx[j]){
+              break;
+            }   // if j counter is apsolutly equal to idx size we set chosen to the length of the arry
+          } if(j === idx.length){ 
+              chosen[chosen.length] = arry[i];        
+      } 
+    } return chosen;
   },
 
   /*******************
