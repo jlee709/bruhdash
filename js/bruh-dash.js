@@ -174,8 +174,23 @@ global.bruhdash = {
 
 
   // removes all given values from an array
-  pull: function () {
+  // identify idx to be pulled
+  // make simple 
+ 
+  pull: function (arry, pullFloor, pullSky) {
+      // var pulled for storing pulled value
+      var pulled = [];
+      
+       for (var i = 0; i < arry.length; i++) {
+        // checks range so i can be pulled and stored
+        if (arry[i] !== pullFloor && arry[i] !== pullSky) {
+          // setting pulled array to = looped arry[i]
+          pulled[pulled.length] = arry[i];
 
+        }
+      }
+
+      return pulled;
   },
 
   // removes elements of an array corresponding to the given indices
