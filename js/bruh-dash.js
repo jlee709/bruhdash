@@ -117,9 +117,23 @@ global.bruhdash = {
   },
 
   // creates a slice of an array with n elements taken from the beginning
-  take: function () {
+  take: function (arry,num) {
+    var takeArray = [];
 
-  },
+      for (var i=0; i<arry.length; i++){
+        if(i < num){
+          takeArray.push(arry[i]);
+        }else if (num === undefined){
+            takeArray.push(arry[0]);
+            return takeArray;
+        
+        }else if (num === 0){
+            return takeArray;
+        }else if(num > arry.length){
+          return arry;
+        }
+      }return takeArray;
+    },
 
   // creates a slice of an array with n elements taken from the end
   takeRight: function () {
