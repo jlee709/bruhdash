@@ -180,7 +180,7 @@ global.bruhdash = {
   pull: function (arry, pullFloor, pullSky) {
       // var pulled for storing pulled value
       var pulled = [];
-      
+
        for (var i = 0; i < arry.length; i++) {
         // checks range so i can be pulled and stored
         if (arry[i] !== pullFloor && arry[i] !== pullSky) {
@@ -194,8 +194,17 @@ global.bruhdash = {
   },
 
   // removes elements of an array corresponding to the given indices
-  pullAt: function () {
-
+  
+   pullAt: function (arry, pullAt) {
+    for(var i = arry.length - 1; i >=0; i--){
+      for(var j = pullAt.length - 1; j >= 0; j--){
+        if(i === pullAt[j]){
+          arry.splice(i, 1);
+        }
+      }
+    }
+    
+    return arry;
   },
 
   // creates an array excluding all the specified values
