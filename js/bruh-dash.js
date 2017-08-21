@@ -58,6 +58,7 @@ global.bruhdash = {
   
   // returns an array with all falsey values removed
   // add all non falsy values
+
     compact: function(arr) {
     var compactor = [];
     for(var i = 0; i < arr.length; i++){
@@ -69,8 +70,16 @@ global.bruhdash = {
   },
 
   // creates a slice of an array from the start index up to but not including the end index
-  slice: function () {
+  slice: function (arry, first, last) {
+      sliced = [];
 
+      for(var i =0; i<arry.length;i++){
+        if (i >= first && i < last){
+          
+          sliced.push(arry[i]);
+        }
+      } 
+      return sliced;
   },
 
   // returns a slice of array with n elements dropped from the beignning
