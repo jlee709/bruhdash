@@ -57,8 +57,15 @@ global.bruhdash = {
   },
   
   // returns an array with all falsey values removed
-  compact: function() {
-
+  // add all non falsy values
+    compact: function(arr) {
+    var compactor = [];
+    for(var i = 0; i < arr.length; i++){
+      if(arr[i]){
+        compactor.push(arr[i]);
+      }
+    }
+    return compactor;
   },
 
   // creates a slice of an array from the start index up to but not including the end index
