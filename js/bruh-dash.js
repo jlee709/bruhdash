@@ -251,9 +251,18 @@ global.bruhdash = {
    *******************/ 
 
   // creates an array of grouped elements
-  zip: function () {
+  
+  zip: function (arry1, arry2) {
 
-  },
+    var zipped = [];
+
+    for (var i = 0; i < arry1.length; i++) {
+
+      zipped[zipped.length] = [arry1[i], arry2[i]];
+
+    }
+      return zipped;
+    },
 
   // creates an array of grouped elements in their pre-zip configuration
   unzip: function () {
