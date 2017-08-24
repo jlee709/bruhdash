@@ -313,9 +313,23 @@ global.bruhdash = {
 
   // creates an array of values by running each element in collection thru the iteratee
   // Note: this should work for arrays and objects
-  map: function() {
+  map: function(item, iteratee) {
+    var newArray = [];
+
+        if (typeof item === 'object'){
+      for (var key in item){
+        newArray.push(iteratee(item[key]));
+      }
+    }else{
+        for (var i = 0; i < item.length; i++){
+         newArray.push(iteratee(item[i]));
+        }
+      }
+      return newArray;
+
 
   },
+
 
   /*************************
    *  SUPER STRETCH GOALS!  *
